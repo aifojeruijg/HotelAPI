@@ -1,0 +1,28 @@
+### Cadastrar Cliente
+POST https://localhost:7087/api/cliente/cadastrar
+Content-Type: application/json
+
+{
+    "nome" : "Fernando",
+    "telefone": "(41)95555-6666",
+    "cpf": "12345678900"
+}
+
+//AAABBBCCCDD
+//12345678900
+
+### Listar Clientes
+GET https://localhost:7087/api/cliente/listar
+
+### Remover Cliente pelo ID
+DELETE https://localhost:7087/api/cliente/deletar/3
+
+### Alterar Cliente pelo ID
+PUT https://localhost:7087/api/cliente/alterar/2
+Content-Type: application/json
+
+{
+    "nome" : "Pedro",
+    "telefone": "(65)90000-5555",
+    "cpf": "45678932100"
+}

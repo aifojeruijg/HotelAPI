@@ -1,0 +1,28 @@
+### Cadastrar Aluguel
+POST https://localhost:7087/api/aluguel/cadastrar
+Content-Type: application/json
+
+{
+    "ClienteId": 1,
+    "QuartoId": 1,
+    "dias": 10
+}
+
+### Listar 
+GET https://localhost:7087/api/aluguel/listar
+
+### Realizar o CheckOut de um quarto/
+DELETE  https://localhost:7087/api/aluguel/checkout/2
+
+### Alterar aluguel com ID
+PUT https://localhost:7087/api/aluguel/trocarquarto/1
+Content-Type: application/json
+
+{
+    "ClienteId": 1,
+    "QuartoId": 2,
+    "dias": 10  
+}
+
+
+

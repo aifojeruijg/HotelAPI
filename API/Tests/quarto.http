@@ -1,0 +1,25 @@
+### Cadastrar Quarto
+POST https://localhost:7087/api/quarto/cadastrar
+Content-Type: application/json
+
+{
+    "numeroquarto" : 10,
+    "tipoquarto": "Simples",
+    "diaria": 100
+}
+
+### Listar Quartos
+GET https://localhost:7087/api/quarto/listar
+
+### Remover Quarto pelo ID
+DELETE https://localhost:7087/api/quarto/deletar/3
+
+### Alterar quarto pelo ID
+PUT https://localhost:7087/api/quarto/alterar/2
+Content-Type: application/json
+
+{
+    "numeroquarto" : 20,
+    "tipoquarto": "Casal",
+    "diaria": 200
+}
