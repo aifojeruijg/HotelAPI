@@ -20,13 +20,19 @@ import { ListarClienteComponent } from './pages/cliente/listar-cliente/listar-cl
 import { CadastrarClienteComponent } from './pages/cliente/cadastrar-cliente/cadastrar-cliente.component';
 import { FormsModule } from '@angular/forms';
 import { AlterarClienteComponent } from './pages/cliente/alterar-cliente/alterar-cliente.component';
+import { ListarQuartoComponent } from './pages/quarto/listar-quarto/listar-quarto.component';
+import { CadastrarQuartoComponent } from './pages/quarto/cadastrar-quarto/cadastrar-quarto.component';
+import { AlterarQuartoComponent } from './pages/quarto/alterar-quarto/alterar-quarto.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListarClienteComponent,
     CadastrarClienteComponent,
-    AlterarClienteComponent
+    AlterarClienteComponent,
+    ListarQuartoComponent,
+    CadastrarQuartoComponent,
+    AlterarQuartoComponent
   ],
   imports: [
     BrowserModule,

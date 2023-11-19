@@ -4,7 +4,7 @@
 
 namespace API.Migrations
 {
-    public partial class Primeira : Migration
+    public partial class CriandoDB : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

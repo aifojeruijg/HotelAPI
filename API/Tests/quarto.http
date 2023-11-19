@@ -23,3 +23,6 @@ Content-Type: application/json
     "tipoquarto": "Casal",
     "diaria": 200
 }
+
+### Buscar Quarto pelo ID
+GET https://localhost:7087/api/quarto/buscar/5

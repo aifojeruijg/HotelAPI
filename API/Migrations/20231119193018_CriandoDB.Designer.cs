@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace API.Migrations
 {
     [DbContext(typeof(AppDataContext))]
-    [Migration("20231119020110_Primeira")]
-    partial class Primeira
+    [Migration("20231119193018_CriandoDB")]
+    partial class CriandoDB
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

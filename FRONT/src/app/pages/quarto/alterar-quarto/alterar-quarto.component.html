@@ -1,0 +1,40 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Alterar Quarto</mat-card-title>
+        <mat-card-subtitle>&nbsp;</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+
+        <mat-form-field class="input" id="id">
+            <mat-label>ID</mat-label>
+            <input type="text" matInput [(ngModel)]="quartoId" disabled="true"/>
+        </mat-form-field>
+
+        <mat-form-field class="input" id="numeroQuarto">
+            <mat-label>Número do quarto</mat-label>
+            <input type="text" placeholder="Ex. 100" matInput [(ngModel)]="numeroQuarto">
+        </mat-form-field>
+
+        <mat-form-field class="input" id="tipoQuarto">
+            <mat-label>Tipo do quarto</mat-label>
+            <input type="text" placeholder="Ex. Casal" matInput [(ngModel)]="tipoQuarto">
+        </mat-form-field>
+
+        <mat-form-field class="input" id="diaria">
+            <mat-label>Valor da diária</mat-label>
+            <span matPrefix>R$ &nbsp;</span>
+            <input 
+            type="text"
+            placeholder="Ex. R$ 150,00"
+            matInput
+            [(ngModel)]="diaria">
+        </mat-form-field>
+
+    </mat-card-content>
+
+    <mat-card-actions>
+        <button color="warn" mat-stroked-button (click)="alterar()">Alterar</button>
+    </mat-card-actions>
+
+</mat-card>

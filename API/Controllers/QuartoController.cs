@@ -95,4 +95,23 @@ public class QuartoController : ControllerBase
             return BadRequest(e.Message);
         }
     }
+
+    [HttpGet]
+    [Route("buscar/{id}")]
+    public IActionResult Buscar([FromRoute] int id)
+    {
+        try
+        {
+            Quarto? quartoCadastrado = _ctx.Quartos.FirstOrDefault(x => x.QuartoId == id);
+            if (quartoCadastrado != null)
+            {
+                return Ok(quartoCadastrado);
+            }
+            return NotFound();
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
+    }
 }
