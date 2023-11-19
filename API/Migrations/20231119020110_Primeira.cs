@@ -4,7 +4,7 @@
 
 namespace API.Migrations
 {
-    public partial class CreatDB : Migration
+    public partial class Primeira : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

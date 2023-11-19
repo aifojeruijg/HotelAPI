@@ -3,9 +3,9 @@ POST https://localhost:7087/api/cliente/cadastrar
 Content-Type: application/json
 
 {
-    "nome" : "Fernando",
+    "nome" : "Julio",
     "telefone": "(41)95555-6666",
-    "cpf": "12345678900"
+    "cpf": "04975686163"
 }
 
 //AAABBBCCCDD
@@ -26,3 +26,6 @@ Content-Type: application/json
     "telefone": "(65)90000-5555",
     "cpf": "45678932100"
 }
+
+### Buscar Cliente pelo ID
+GET https://localhost:7087/api/cliente/buscar/10

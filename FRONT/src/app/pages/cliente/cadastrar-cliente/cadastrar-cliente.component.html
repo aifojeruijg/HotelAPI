@@ -1,0 +1,46 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Cadastrar Cliente</mat-card-title>
+        <mat-card-subtitle>&nbsp;</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+        <mat-form-field class="input" id="nome">
+            <mat-label>Nome</mat-label>
+            <input 
+            type="text" 
+            matInput
+            placeholder="Ex. Julio"
+            [(ngModel)]="nome"
+      />
+        </mat-form-field>
+
+        <mat-form-field class="input" id="cpf">
+            <mat-label>CPF</mat-label>
+            <input 
+            type="text"
+            matInput
+            placeholder="Ex. 04976686103"
+            [(ngModel)]="cpf"
+            />
+        </mat-form-field>
+
+        <mat-form-field class="input" id="telefone">
+            <mat-label>Telefone</mat-label>
+            <input 
+            type="text"
+            matInput
+            placeholder="Ex. 41911223344"
+            [(ngModel)]="telefone"
+            >
+        </mat-form-field>
+
+    </mat-card-content>
+
+    <mat-card-actions>
+        <button color="wanr" mat-stroked-button (click)="cadastrar()"> 
+            Cadastrar
+        </button>
+    </mat-card-actions>
+
+</mat-card>

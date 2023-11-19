@@ -96,4 +96,23 @@ public class ClienteController : ControllerBase
                 return BadRequest(e.Message);
             }
         }
+
+    [HttpGet]
+    [Route("buscar/{id}")]
+    public IActionResult Buscar([FromRoute] int id)
+    {
+        try
+        {
+            Cliente? clienteCadastrado = _ctx.Clientes.FirstOrDefault(x => x.ClienteId == id);
+            if (clienteCadastrado != null)
+            {
+                return Ok(clienteCadastrado);
+            }
+            return NotFound();
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
+    }
 }
