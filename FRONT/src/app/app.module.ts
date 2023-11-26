@@ -13,6 +13,7 @@ import { MatInputModule } from "@angular/material/input";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatSnackBarModule } from "@angular/material/snack-bar";
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -23,6 +24,9 @@ import { AlterarClienteComponent } from './pages/cliente/alterar-cliente/alterar
 import { ListarQuartoComponent } from './pages/quarto/listar-quarto/listar-quarto.component';
 import { CadastrarQuartoComponent } from './pages/quarto/cadastrar-quarto/cadastrar-quarto.component';
 import { AlterarQuartoComponent } from './pages/quarto/alterar-quarto/alterar-quarto.component';
+import { CadastrarAluguelComponent } from './pages/aluguel/cadastrar-aluguel/cadastrar-aluguel.component';
+import { ListarAluguelComponent } from './pages/aluguel/listar-aluguel/listar-aluguel.component';
+
 
 @NgModule({
   declarations: [
@@ -32,7 +36,11 @@ import { AlterarQuartoComponent } from './pages/quarto/alterar-quarto/alterar-qu
     AlterarClienteComponent,
     ListarQuartoComponent,
     CadastrarQuartoComponent,
-    AlterarQuartoComponent
+    AlterarQuartoComponent,
+    CadastrarQuartoComponent,
+    ListarQuartoComponent,
+    CadastrarAluguelComponent,
+    ListarAluguelComponent,
   ],
   imports: [
     BrowserModule,

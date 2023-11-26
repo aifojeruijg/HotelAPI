@@ -6,6 +6,12 @@ import { CadastrarClienteComponent } from './pages/cliente/cadastrar-cliente/cad
 import { AlterarClienteComponent } from './pages/cliente/alterar-cliente/alterar-cliente.component';
 import { CadastrarQuartoComponent } from './pages/quarto/cadastrar-quarto/cadastrar-quarto.component';
 import { AlterarQuartoComponent } from './pages/quarto/alterar-quarto/alterar-quarto.component';
+import { CadastrarAluguelComponent } from './pages/aluguel/cadastrar-aluguel/cadastrar-aluguel.component';
+import { ListarAluguelComponent } from './pages/aluguel/listar-aluguel/listar-aluguel.component';
+//import { ListarAlugueisComponent } from './components/listar-alugueis/listar-alugueis.component';
+//import { CadastrarAluguelComponent } from '.pages/aluguel/cadastrar-aluguel/cadastrar-aluguel.component';
+//import { TrocarQuartoComponent } from './components/trocar-quarto/trocar-quarto.component';
+
 
 const routes: Routes = [
   {
@@ -35,7 +41,17 @@ const routes: Routes = [
   {
     path: "pages/quarto/alterar/:id",
     component: AlterarQuartoComponent,
+  },
+  {
+    path: "pages/aluguel/listar",
+    component: ListarAluguelComponent,
+  },
+  {
+    path: "pages/aluguel/cadastrar",
+    component: CadastrarAluguelComponent,
   }
+  //{ path: 'pages/aluguel/cadastrar',
+  //  component: CadastrarAluguelComponent },
 ];
 
 @NgModule({
