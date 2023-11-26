@@ -9,4 +9,6 @@ public class Aluguel
     public Quarto? Quarto { get; set; }
     public int Dias { get; set; }
     public double ValorTotal { get; set; }
+    public DateTime DataEntrada { get; set; } = DateTime.Now; 
+   public DateTime DataSaida => DataEntrada.AddDays(Dias);
 }

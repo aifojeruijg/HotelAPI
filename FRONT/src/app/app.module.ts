@@ -26,6 +26,7 @@ import { CadastrarQuartoComponent } from './pages/quarto/cadastrar-quarto/cadast
 import { AlterarQuartoComponent } from './pages/quarto/alterar-quarto/alterar-quarto.component';
 import { CadastrarAluguelComponent } from './pages/aluguel/cadastrar-aluguel/cadastrar-aluguel.component';
 import { ListarAluguelComponent } from './pages/aluguel/listar-aluguel/listar-aluguel.component';
+import { TrocarQuartoComponent } from './pages/aluguel/trocar-quarto/trocar-quarto.component';
 
 
 @NgModule({
@@ -41,6 +42,7 @@ import { ListarAluguelComponent } from './pages/aluguel/listar-aluguel/listar-al
     ListarQuartoComponent,
     CadastrarAluguelComponent,
     ListarAluguelComponent,
+    TrocarQuartoComponent,
   ],
   imports: [
     BrowserModule,

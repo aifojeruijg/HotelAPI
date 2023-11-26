@@ -16,7 +16,7 @@ public class AluguelController : ControllerBase
     }
 
     //POST: api/aluguel/cadastrar
-    [HttpPost]
+[HttpPost]
 [Route("cadastrar")]
 public IActionResult Cadastrar([FromBody] Aluguel aluguel)
 {
@@ -37,7 +37,8 @@ public IActionResult Cadastrar([FromBody] Aluguel aluguel)
             if (quarto == null)
             {
                 transaction.Rollback();
-                return BadRequest("O quarto está indisponível.");
+                //return Ok(new { message = "Troca de quarto concluída com sucesso." });
+                return Conflict(new {message = "O quarto está indisponível!"});
             }
             double valorTotal = quarto.Diaria * aluguel.Dias;
             quarto.Status = "Indisponivel";
@@ -101,7 +102,7 @@ public IActionResult Checkout([FromRoute] int id)
         _ctx.Alugueis.Remove(aluguel);
         _ctx.SaveChanges();
 
-        return Ok("Checkout concluído com sucesso.");
+         return Ok(new { message = "Check Out realizado com sucesso!" });
     }
     catch (Exception e)
     {
@@ -148,12 +149,36 @@ public IActionResult TrocarQuarto([FromRoute] int id, [FromBody] Aluguel aluguel
 
         _ctx.SaveChanges();
 
-        return Ok("Troca de quarto concluída com sucesso.");
+        return Ok(new { message = "Troca de quarto concluída com sucesso." });
+
     }
     catch (Exception e)
     {
         return BadRequest(e.Message);
     }
 }
+   [HttpGet]
+    [Route("buscar/{id}")]
+    public IActionResult Buscar([FromRoute] int id)
+    {
+        try
+        {
+            Aluguel? aluguelCadastrado = _ctx.Alugueis
+                .Include(a => a.Cliente) 
+                .Include(a => a.Quarto) 
+                .FirstOrDefault(x => x.AluguelId == id);
+
+            if (aluguelCadastrado != null)
+            {
+                return Ok(aluguelCadastrado);
+            }
+            return NotFound();
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
+    }
+
     
 }

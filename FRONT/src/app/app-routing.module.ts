@@ -8,9 +8,7 @@ import { CadastrarQuartoComponent } from './pages/quarto/cadastrar-quarto/cadast
 import { AlterarQuartoComponent } from './pages/quarto/alterar-quarto/alterar-quarto.component';
 import { CadastrarAluguelComponent } from './pages/aluguel/cadastrar-aluguel/cadastrar-aluguel.component';
 import { ListarAluguelComponent } from './pages/aluguel/listar-aluguel/listar-aluguel.component';
-//import { ListarAlugueisComponent } from './components/listar-alugueis/listar-alugueis.component';
-//import { CadastrarAluguelComponent } from '.pages/aluguel/cadastrar-aluguel/cadastrar-aluguel.component';
-//import { TrocarQuartoComponent } from './components/trocar-quarto/trocar-quarto.component';
+import { TrocarQuartoComponent } from './pages/aluguel/trocar-quarto/trocar-quarto.component';
 
 
 const routes: Routes = [
@@ -49,9 +47,12 @@ const routes: Routes = [
   {
     path: "pages/aluguel/cadastrar",
     component: CadastrarAluguelComponent,
+  },
+  {
+    path: "pages/aluguel/trocarquarto/:id",
+    component: TrocarQuartoComponent,
   }
-  //{ path: 'pages/aluguel/cadastrar',
-  //  component: CadastrarAluguelComponent },
+
 ];
 
 @NgModule({

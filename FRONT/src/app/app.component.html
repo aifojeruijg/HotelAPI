@@ -10,14 +10,6 @@
     <mat-sidenav #sidenav mode="side">
 
         <mat-nav-list>
-            <a mat-list-item routerLink="/pages/cliente/listar">
-                <div class="item">
-                    <mat-icon class="icon"> list </mat-icon>
-                    <span>Listar Clientes</span>
-                </div>
-            </a>
-        </mat-nav-list>
-        <mat-nav-list>
             <a mat-list-item routerLink="/pages/cliente/cadastrar">
                 <div class="item">
                     <mat-icon class="icon"> add </mat-icon>
@@ -25,14 +17,16 @@
                 </div>
             </a>
         </mat-nav-list>
+
         <mat-nav-list>
-            <a mat-list-item routerLink="/pages/quarto/listar">
+            <a mat-list-item routerLink="/pages/cliente/listar">
                 <div class="item">
                     <mat-icon class="icon"> list </mat-icon>
-                    <span>Listar Quartos</span>
+                    <span>Listar Clientes</span>
                 </div>
             </a>
         </mat-nav-list>
+
         <mat-nav-list>
             <a mat-list-item routerLink="/pages/quarto/cadastrar">
                 <div class="item">
@@ -41,6 +35,34 @@
                 </div>
             </a>
         </mat-nav-list>
+      
+        <mat-nav-list>
+            <a mat-list-item routerLink="/pages/quarto/listar">
+                <div class="item">
+                    <mat-icon class="icon"> list </mat-icon>
+                    <span>Listar Quartos</span>
+                </div>
+            </a>
+        </mat-nav-list>
+
+        <mat-nav-list>
+            <a mat-list-item routerLink="/pages/aluguel/cadastrar">
+                <div class="item">
+                    <mat-icon class="icon"> add </mat-icon>
+                    <span>Cadastrar Aluguel</span>
+                </div>
+            </a>
+        </mat-nav-list>
+
+        <mat-nav-list>
+            <a mat-list-item routerLink="/pages/aluguel/listar">
+                <div class="item">
+                    <mat-icon class="icon"> list </mat-icon>
+                    <span>Listar Aluguéis</span>
+                </div>
+            </a>
+        </mat-nav-list>
+        
     
 
     </mat-sidenav>

@@ -1,0 +1,40 @@
+<mat-card>
+    <mat-card-header>
+      <mat-card-title>Alterar Aluguel</mat-card-title>
+      <mat-card-subtitle>&nbsp;</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-form-field class="input" id="id">
+        <mat-label>ID do Aluguel</mat-label>
+        <input  matInput type="text" [(ngModel)]="aluguelId" disabled="true" />
+      </mat-form-field>
+      <mat-form-field class="input" id="peso">
+        <mat-label>ID do Quarto</mat-label>
+        <input  matInput type="text" [(ngModel)]="quartoId" disabled="true" />
+      </mat-form-field>
+
+      <mat-form-field class="input" id="altura">
+        <mat-label>ID do Cliente</mat-label>
+        <input  matInput type="text" [(ngModel)]="clienteId" disabled="true"/>
+      </mat-form-field>
+
+      <mat-form-field class="input" id="dias">
+        <mat-label>Dias</mat-label>
+        <input  matInput type="text" [(ngModel)]="dias" />
+      </mat-form-field>
+     
+      <mat-form-field class="input" id="usuario">
+        <mat-label>Usuario</mat-label>
+        <mat-select [(ngModel)]="quartoId">
+          <mat-option *ngFor="let q of quartos" [value]="q.quartoId">
+            {{ q.quartoId }} - {{ q.tipoQuarto }} - R${{q.diaria}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-card-actions>
+        <button color="warn" mat-stroked-button (click)="trocarquarto()">Concluir</button>
+      </mat-card-actions>
+
+    </mat-card-content>
+    
+  </mat-card>

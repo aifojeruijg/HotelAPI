@@ -3,16 +3,26 @@
     <mat-card-title>Cadastrar Aluguel</mat-card-title>
     <mat-card-subtitle>&nbsp;</mat-card-subtitle>
   </mat-card-header>
+<mat-card-content>
 
-  <mat-card-content>
-    <mat-form-field class="input" id="clienteId">
-      <mat-label>ID do Cliente</mat-label>
-      <input type="number" matInput [(ngModel)]="clienteId" />
+    <mat-form-field class="input" id="cliente">
+      <mat-label>Cliente</mat-label>
+      <mat-select [(ngModel)]="clienteId">
+        <mat-option *ngFor="let c of clientes" [value]="c.clienteId">
+          {{ c.nome }}
+        </mat-option>
+      </mat-select>
     </mat-form-field>
-    <mat-form-field class="input" id="quartoId">
-      <mat-label>ID do Quarto</mat-label>
-      <input type="number" matInput [(ngModel)]="quartoId" />
+
+    <mat-form-field class="input" id="quarto">
+      <mat-label>Quarto</mat-label>
+      <mat-select [(ngModel)]="quartoId">
+        <mat-option *ngFor="let q of quartos" [value]="q.quartoId">
+          {{ q.quartoId }}  -  {{q.tipoQuarto}}  -  R${{q.diaria}}
+        </mat-option>
+      </mat-select>
     </mat-form-field>
+
     <mat-form-field class="input" id="dias">
       <mat-label>Número de Dias</mat-label>
       <input type="number" matInput [(ngModel)]="dias" />

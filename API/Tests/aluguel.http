@@ -5,17 +5,17 @@ Content-Type: application/json
 {
     "ClienteId": 1,
     "QuartoId": 1,
-    "dias": 10
+    "dias": 2
 }
 
 ### Listar 
 GET https://localhost:7087/api/aluguel/listar
 
 ### Realizar o CheckOut de um quarto/
-DELETE  https://localhost:7087/api/aluguel/checkout/2
+DELETE  https://localhost:7087/api/aluguel/checkout/5
 
 ### Alterar aluguel com ID
-PUT https://localhost:7087/api/aluguel/trocarquarto/1
+PUT https://localhost:7087/api/aluguel/trocarquarto/2
 Content-Type: application/json
 
 {
@@ -23,6 +23,9 @@ Content-Type: application/json
     "QuartoId": 2,
     "dias": 10  
 }
+
+### Buscar aluguel pelo ID
+GET https://localhost:7087/api/aluguel/buscar/1
 
 
 

@@ -1,10 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
 namespace API.Migrations
 {
-    public partial class CriandoDB : Migration
+    public partial class First : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -48,7 +49,8 @@ namespace API.Migrations
                     ClienteId = table.Column<int>(type: "INTEGER", nullable: false),
                     QuartoId = table.Column<int>(type: "INTEGER", nullable: false),
                     Dias = table.Column<int>(type: "INTEGER", nullable: false),
-                    ValorTotal = table.Column<double>(type: "REAL", nullable: false)
+                    ValorTotal = table.Column<double>(type: "REAL", nullable: false),
+                    DataEntrada = table.Column<DateTime>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {

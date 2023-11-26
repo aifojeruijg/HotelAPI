@@ -8,4 +8,6 @@ export interface Aluguel{
     quartoId?: number;
     dias: number;
     valorTotal: number;
+    dataEntrada?: Date; 
+    dataSaida?: Date;   
 }

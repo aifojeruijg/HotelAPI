@@ -28,4 +28,4 @@ Content-Type: application/json
 }
 
 ### Buscar Cliente pelo ID
-GET https://localhost:7087/api/cliente/buscar/10
+GET https://localhost:7087/api/cliente/buscar/1

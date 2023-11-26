@@ -51,7 +51,7 @@ alterar(): void {
 
   this.client.put<Cliente>(`https://localhost:7087/api/cliente/alterar/${this.clienteId}`, cliente).subscribe({
     next: (cliente) => {
-      this.snackBar.open("Produto alterado com sucesso!", "Fechar", {
+      this.snackBar.open("Cliente alterado com sucesso!", "Fechar", {
         duration: 2000,
         horizontalPosition: "right",
         verticalPosition: "top",
