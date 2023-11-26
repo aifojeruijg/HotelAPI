@@ -1,0 +1,25 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Cadastrar Aluguel</mat-card-title>
+    <mat-card-subtitle>&nbsp;</mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content>
+    <mat-form-field class="input" id="clienteId">
+      <mat-label>ID do Cliente</mat-label>
+      <input type="number" matInput [(ngModel)]="clienteId" />
+    </mat-form-field>
+    <mat-form-field class="input" id="quartoId">
+      <mat-label>ID do Quarto</mat-label>
+      <input type="number" matInput [(ngModel)]="quartoId" />
+    </mat-form-field>
+    <mat-form-field class="input" id="dias">
+      <mat-label>Número de Dias</mat-label>
+      <input type="number" matInput [(ngModel)]="dias" />
+    </mat-form-field>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button color="warn" mat-stroked-button (click)="cadastrar()">Cadastrar</button>
+  </mat-card-actions>
+</mat-card>
