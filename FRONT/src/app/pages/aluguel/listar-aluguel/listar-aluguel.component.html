@@ -1,20 +1,3 @@
-<!-- <mat-card>
-  <mat-card-header>
-    <mat-card-title>Listar Aluguéis</mat-card-title>
-    <mat-card-subtitle>&nbsp;</mat-card-subtitle>
-  </mat-card-header>
-
-  <mat-card-content>
-    <mat-list>
-      <mat-list-item *ngFor="let aluguel of alugueis">
-        <h4 mat-line>{{ aluguel.cliente?.nome }}</h4>
-        <p mat-line>{{ aluguel.quarto?.numeroQuarto }} - {{ aluguel.quarto?.tipoQuarto }}</p>
-        <p mat-line>Dias: {{ aluguel.dias }}</p>
-        <p mat-line>Valor Total: R$ {{ aluguel.valorTotal }}</p>
-      </mat-list-item>
-    </mat-list>
-  </mat-card-content>
-</mat-card> -->
 
 <mat-card>
   <mat-card-header>
@@ -71,7 +54,7 @@
       </ng-container>
 
       <ng-container matColumnDef="trocarquarto">
-        <th mat-header-cell *matHeaderCellDef>Alterar de Quarto</th>
+        <th mat-header-cell *matHeaderCellDef>Alterar</th>
         <td mat-cell *matCellDef="let aluguel">
           <a
             color="accent"

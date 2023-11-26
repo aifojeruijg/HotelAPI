@@ -24,7 +24,7 @@
       </mat-form-field>
      
       <mat-form-field class="input" id="usuario">
-        <mat-label>Usuario</mat-label>
+        <mat-label>Quarto</mat-label>
         <mat-select [(ngModel)]="quartoId">
           <mat-option *ngFor="let q of quartos" [value]="q.quartoId">
             {{ q.quartoId }} - {{ q.tipoQuarto }} - R${{q.diaria}}

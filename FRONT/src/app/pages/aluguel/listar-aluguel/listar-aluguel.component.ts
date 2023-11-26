@@ -56,26 +56,6 @@ export class ListarAluguelComponent implements OnInit {
         }
       })
   }
-
-  // quarto?: Quarto;
-  // cliente?: Cliente;
-  // nome?: string;
-  // tipoQuarto?: string;
-  // qaurtoId?: number;
-  // alugueis?: Aluguel[];
-  // novoQuartoId?: number;
-
-  // trocarQuarto(id: number): void {
-  //   const aluguelModificado = { quartoId: this.novoQuartoId };
-  //   this.client.put(`https://localhost:7087/api/aluguel/trocarquarto/${id}`, aluguelModificado).subscribe({
-  //     next: () => {
-  //       this.router.navigate(['pages/aluguel/listar']);
-  //     },
-  //     error: (error) => {
-  //       console.log(error);
-  //     },
-  //   });
-  // }
 }
 
 

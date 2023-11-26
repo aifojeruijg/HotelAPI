@@ -65,7 +65,6 @@ export class TrocarQuartoComponent {
   }
 
   trocarquarto(): void {
-    // Encontrar o novo quarto selecionado pelo usuário
     const novoQuarto = this.quartos.find(q => q.quartoId === this.quartoId);
   
     if (!novoQuarto) {
@@ -73,18 +72,17 @@ export class TrocarQuartoComponent {
       return;
     }
   
-    // Recalcular o valor total com base na nova diária do quarto
     const novoValorTotal = this.dias * novoQuarto.diaria;
   
     let aluguel: Aluguel = {
       quartoId: this.quartoId,
       dias: this.dias,
-      valorTotal: novoValorTotal, // Atualizar o valor total com o novo cálculo
+      valorTotal: novoValorTotal, 
     };
   
     this.client.put<Aluguel>(`https://localhost:7087/api/aluguel/trocarquarto/${this.aluguelId}`, aluguel).subscribe({
       next: (aluguel) => {
-        this.snackBar.open("Quarto alterado com sucesso!", "Fechar", {
+        this.snackBar.open("Aluguel alterado com sucesso!", "Fechar", {
           duration: 1500,
           horizontalPosition: "right",
           verticalPosition: "top",
@@ -93,7 +91,6 @@ export class TrocarQuartoComponent {
       },
       error: (error) => {
         console.log(error);
-        // Trate o erro aqui, mostre uma mensagem de erro ao usuário, etc.
       }
     });
   }
